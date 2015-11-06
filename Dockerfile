@@ -3,7 +3,7 @@ FROM ubuntu:trusty
 # Install packages
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
-  apt-get -y install unzip supervisor apache2 libapache2-mod-php5 php5-mysql pwgen php-apc php5-mcrypt && \
+  apt-get -y install wget unzip supervisor apache2 libapache2-mod-php5 php5-mysql pwgen php-apc php5-mcrypt && \
   echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 # Add image configuration and scripts
